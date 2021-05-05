@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS解密</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        function renderList(title, items) {
+            if(!Array.isArray(items)) {
+                throw new Error('items必须为数组');
+            }
+            var links = items.map((item) => {
+                const { name, link } = item;                
+                let html = `
+                    <div class="link">
+                        <a href="${link}" class="line">${name}</a>
+                    </div>
+                `;
+                return html;
+            });
+            var list = links.join('\n');
+            return `<h1 class="title">${title}</h1><div class="box">${list}</div>`;
+        }
+        var data = [
+            { 
+                title: "第一章 CSS编码技巧", 
+                items: [
+                    { name: "YES", link: "./01_CSS编码技巧/01_YES.html" },
+                ], 
+            },
+        ];
+        window.addEventListener('DOMContentLoaded', () => {
+            var html = data.map((value) => {
+                const { title, items } = value;
+                return renderList(title, items);
+            });
+            var app = document.getElementById('app');
+            app.innerHTML = html;
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+/* 公共css */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+li { list-style: none; }
+a { text-decoration: none; }
+
+body {
+    font-size: 14px;
+    background-color: white;
+}
+
+/* 首页 */
+
+.title {
+    color: #333;
+    padding: 14px;
+}
+.box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.link {
+    display: block;
+    padding: 10px 15px;
+    border: 2px solid pink; 
+    margin: 10px;
+
+}
+.link a {
+    color: pink;
+    font-size: 25px;
+}
