@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+      span {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 200px;
+        width: 150px;
+        height: 150px;
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <button>点击夏雨荷才可以走</button>
+    <div></div>
+    <span>夏雨荷</span>
+    <script>
+      //简单封装函数obj目标对象 target目标位置
+      //给不同的元素指定了不同的定时器
+      function animate(obj, target) {
+        //当我们不断的点击按钮，这个元素的速度会越来越快，因为定时器开多了
+        //解决方案就是在函数最上面清除一下定时器
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+          if (obj.offsetLeft >= target) {
+            clearInterval(obj.timer);
+          }
+          obj.style.left = obj.offsetLeft + 1 + "px";
+        }, 5);
+      }
+      var div = document.querySelector("div");
+      var span = document.querySelector("span");
+      var btn = document.querySelector("button");
+      //调用函数
+      animate(div, 500);
+      btn.addEventListener("click", function () {
+        animate(span, 700);
+        // btn.disabled = true;
+      });
+    </script>
+  </body>
+</html>

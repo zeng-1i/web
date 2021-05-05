@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //字符串截取    substr("开始截取的下标","截取的长度")
+        var str1 = "改革春风吹满地";
+        console.log(str1.substr(2, 2));
+
+        //替换字符串 replace("被替换的字符串","替换为的字符串") 只会替换第一个字符，后面的不管
+        var str2 = "andy";
+        console.log(str2.replace("a", "b"));
+        var str3 = "abcoefoxyozzopp";
+        while (str3.indexOf("o") !== -1) {
+            str3 = str3.replace("o", "*");
+        }
+        console.log(str3);
+        //字符转换为数组    split("分割符")
+        var str4 = "red,pink,blue";
+        console.log(str4.split(","));
+        var str5 = "red&pink&blue";
+        console.log(str5.split("&"));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

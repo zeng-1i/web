@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 每一个函数内部都有一个arguments，是系统内置的
+        // arguments是用来存储实参的
+        // arguments.length 输出当当前里面存储的参数个数 就是数组咯
+        // function show(){
+        //     alert(arguments.length);
+        // }
+        // show(1,2 ,3,45,'hello',"woeld");
+
+        // 求和：计算传入的任意数字的和     如果参数的个数是确定的，最好不要使用arguments
+        function sum(){
+            // alert(arguments.length);
+            var res = 0;
+            for(var i = 0; i < arguments.length; i++){
+                res += arguments[i];
+            }
+            return res;
+        }
+        alert(sum(10,20,30,40,50));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

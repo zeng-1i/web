@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+    <script>
+        // var obj = {};   //创建了一个空的对象
+        // var obj = {
+        //     uname: '张三疯',
+        //     age: 18,
+        //     sex: '男',
+        //     sayHi: function () {
+        //         console.log('hi~');
+        //     }
+        // }
+
+        // 构造函数创建对象
+        // 语法格式如下：
+        // function 构造函数名() {
+        //     this.属性 = 值;
+        //     this.方法 = function () { }
+        // }
+        // new 构造函数名();
+
+        // 1、构造函数的名字，首字母需要大写
+        // 2、构造函数的调用，需要用 new开始
+        function Star(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function (sang) {
+                console.log(sang);
+            }
+        }
+        var ldh = new Star('刘德华', 18, '男');
+        console.log(ldh.name);
+        ldh.sing('冰雨');
+        var zxy = new Star('张学友', 19, '男');
+        zxy.sing('李香兰');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      console.log(location.search);
+      //1、先把问号去掉     substr
+      var params = location.search.substr(1);
+      //2、利用=把字符串分割为数组 split
+      var arr = params.split("=");
+      console.log(arr);
+
+      var div = document.querySelector("div");
+      //3、吧数据写入div中
+      div.innerHTML = "欢迎您，" + arr[1];
+    </script>
+  </body>
+</html>

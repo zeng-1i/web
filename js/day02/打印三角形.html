@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=`">
+    <title>Document</title>
+    <script>
+        // for(var i = 1; i <= 5; i++){
+        //     for(var k = 1; k <= 5-i; k++){
+        //         document.write("🙂");
+        //     }
+        //     document.write("<br/>");
+        // }
+
+        //水仙花数练习
+        for(var i = 100; i < 1000; i++){
+            var a = i % 10;
+            var b = parseInt(i/10)%10;
+            var c = parseInt(i/100);
+            var sum = Math.pow(a,3) + Math.pow(b,3) + Math.pow(c,3);
+            if(i == sum){
+                document.write(i + "<br/>")
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

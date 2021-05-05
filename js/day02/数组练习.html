@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Math.random() 随机[0,1)的数
+        // parseInt(Math.random() * 10); 将0~1的随机数乘10再取整，获得0~9之间的随机整数
+        var arr = new Array(10);
+        for(var i = 0; i < arr.length; i++){
+            arr[i] = parseInt(Math.random() * 10);
+        }
+        // alert(arr);
+        // for(var i = 0; i < arr.length; i++){
+        //     document.write(arr[i] + "&nbsp");
+        // }
+        for (var i in arr) {
+            document.write(arr[i] + "&nbsp");
+            }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html> 

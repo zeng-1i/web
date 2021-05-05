@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见网页布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            background-image: url(images/bg.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .top {
+            height: 50px;
+            background-color: gray;
+        }
+
+        .banner {
+            width: 80%;
+            height: 150px;
+            background-color: gray;
+            margin: 10px auto;
+        }
+
+        .box1 {
+            width: 80%;
+            height: 400px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .box1 li {
+            float: left;
+            width: 24%;
+            height: 400px;
+            background-color: skyblue;
+            margin-right: 1.33333%;
+        }
+
+        .box1 .last {
+            margin-right: 0;
+        }
+
+        .box2 {
+            width: 80%;
+            height: 400px;
+            background-color: pink;
+            margin: 10px auto;
+        }
+
+        .box2 li {
+            float: left;
+            width: 16%;
+            height: 400px;
+            background-color: skyblue;
+            margin-right: 0.8%;
+        }
+
+        .box2 .last {
+            margin-right: 0;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: gray;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">top</div>
+    <div class="banner">banner</div>
+    <div class="box1">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="last">4</li>
+        </ul>
+    </div>
+    <div class="box2">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li class="last">6</li>
+        </ul>
+    </div>
+    <div class="footer">footer</div>
+</body>
+
+</html>

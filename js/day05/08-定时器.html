@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 定时器
+        //     格式：setInterval(函数，毫秒数);
+        //     功能：每隔对应的毫秒数，执行一次传入的函数
+
+        //函数写法1
+        // var i = 0;
+        // function show() {
+        //     if (i == 5) {
+        //         clearInterval(timer);
+        //     }
+        //     document.write(i++ + "<br/>");
+        // }
+
+        //函数写法2
+        // var show=function(){
+        //     if(i==5){
+        //         clearInterval(timer);
+        //     }
+        //     document.write(i++ + "<br/>");
+        // }
+
+        //函数写法3 最终的匿名函数写法 一次性的
+        var i = 0;
+        var timer = setInterval(function () {
+            if (i == 5) {
+                clearInterval(timer);
+            }
+            document.write(i++ + "<br/>");
+        }, 1000);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

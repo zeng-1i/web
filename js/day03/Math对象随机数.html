@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.Math对象随机方法  random() 返回一个随机的小数  0 <= x < 1
+        // 2.这个方法里面不跟参数
+        // 3.代码验证
+        console.log(parseInt(Math.random() * 10));
+
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandom(1, 10));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

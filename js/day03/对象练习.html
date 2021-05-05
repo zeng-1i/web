@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象练习</title>
+    <script>
+        function Hero(name, type, blood, attack) {
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = attack;
+        }
+        var lianpo = new Hero("廉颇", "力量型", 500, "近战");
+        var houyi = new Hero("后羿", "射手型", 100, "远程");
+        document.write(lianpo.name + "是" + lianpo.type + "英雄，血量" + lianpo.blood + "，使用" + lianpo.attack + "攻击");
+        document.write(houyi.name + "是" + houyi.type + "英雄，血量" + houyi.blood + "，使用" + houyi.attack + "攻击");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

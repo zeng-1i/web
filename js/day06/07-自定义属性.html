@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div getTime="20" data-index="2"></div>
+    <script>
+      //   var div = document.querySelector("div");
+      //   console.log(div.getTime);
+      //   自定义属性无法通过通用的方法获得
+
+      //    先var一个数据获取标签
+      var div = document.querySelector("div");
+      //    再通过标签获取自定义属性
+      console.log(div.getAttribute("getTime"));
+      div.setAttribute("data-time", 20);
+      console.log(div.getAttribute("data-index"));
+
+      //    h5新增的获取自定义属性的方法
+      console.log(div.dataset.time);
+    </script>
+  </body>
+</html>

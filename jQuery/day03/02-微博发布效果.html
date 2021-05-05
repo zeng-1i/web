@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .box {
+        width: 600px;
+        border: 1px solid black;
+        margin: 100px auto;
+        padding: 20px;
+      }
+      textarea {
+        width: 450px;
+        height: 160px;
+        outline: none;
+        resize: none;
+      }
+      ul {
+        width: 450px;
+        padding-left: 80px;
+      }
+      ul li {
+        line-height: 25px;
+        border-bottom: 1px dashed #cccccc;
+        display: none;
+      }
+      input {
+        float: right;
+      }
+      ul li a {
+        float: right;
+      }
+    </style>
+    <script src="jquery.min.js"></script>
+
+    <script>
+      $(function () {
+        $(".btn").on("click", function () {
+          console.log(111);
+          var li = $("<li></li>");
+          li.html($(".txt").val() + "<a href='javascript:;'>删除</a>");
+          $("ul").prepend(li);
+          li.slideDown(500);
+          $(".txt").val("");
+        });
+
+        $("ul").on("click", "a", function () {
+          $(this)
+            .parent()
+            .slideUp(function () {
+              $(this).remove();
+            });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="box" id="weibo">
+      <span>微博发布</span>
+      <textarea name="" id="" cols="30" rows="10" class="txt"></textarea>
+      <button class="btn">发布</button>
+      <ul></ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+    <script src="jquery.min.js"></script>
+  </head>
+  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <script>
+      $(function () {
+        // $("div").css("color", "red");
+        var sum = 0;
+        var arr = ["red", "green", "blue"];
+        $("div").each(function (i, domEle) {
+          console.log(i);
+          console.log(domEle);
+          $(domEle).css("backgroundColor", arr[i]);
+          sum += parseInt($(domEle).text());
+        });
+        console.log(sum);
+
+        $.each($("div"), function (i, ele) {
+          console.log(i);
+          console.log(ele);
+        });
+
+        $.each(arr, function (i, ele) {
+          console.log(i);
+          console.log(ele);
+        });
+      });
+    </script>
+  </body>
+</html>

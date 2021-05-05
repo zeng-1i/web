@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="timer">2021-03-26</div>
+    <script>
+        //1、由于文档是从上往下加载，所以要先有标签，这样就应该把script写在标签的下面
+        //2、get获得 element元素 by通过 采用驼峰命名的规则 即getElementById
+        //3、参数 id是大小写敏感的字符串
+        //4、返回的是一个元素对象
+        var element = document.getElementById('timer');
+        console.log(timer);
+        console.log(typeof timer);  //object  这里返回的是一个对象
+        //5、console.dir 打印我们返回的元素对象 能更好的查看里面的属性和方法
+        console.dir(timer);
+    </script>
+</body>
+
+</html>

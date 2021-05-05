@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //js是单线程脚本语言 后引入同步和异步的概念 允许创建多个任务
+      //第一个问题
+      //   console.log(1);
+
+      //   setInterval(function () {
+      //     console.log(3);
+      //   }, 3000);
+
+      //   console.log(2);
+
+      //第二个问题
+      console.log(1);
+      setInterval(function () {
+        console.log(3);
+      }, 0);
+      console.log(2);
+
+      /* 
+        同步和异步
+            同步任务都在主线程上执行，形成一个执行栈
+            异步任务(回调函数)加入到队列任务中等待
+            执行顺序是先把同步任务的中执行栈执行完毕 再执行队列任务中的回调函数
+      */
+    </script>
+  </body>
+</html>

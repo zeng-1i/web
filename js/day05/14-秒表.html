@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秒表</title>
+    <style>
+        #div1 {
+            width: 100px;
+            height: 200px;
+            padding: 50px;
+            background-color: orange;
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+
+        #div span {
+            font-size: 22px;
+        }
+
+        #div1 button {
+            width: 100px;
+            height: 30px;
+            font-size: 16px;
+            margin-top: 20px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+        // window.onload = function () {
+        //     写在这里的代码是整个页面加载完成之后运行的();
+        // }
+
+        //通过id获取标签的方法进行简化
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        var i = 0;
+        var timer = null;//记录定时器的返回值
+        var isRunning = false;//代表当前定时器是否运行
+        window.onload = function () {
+            //获取按钮
+            // var oStart = document.getElementById("start");
+            // var oStart = $("start");
+            // alert(oStart);   后面就可以直接用简化的写法了，整个获取id的过程都被封装了
+            function startFunc() {
+                timer = setInterval(function () {
+                    i++;
+                    $("sec").innerHTML = doubleNum(i % 60);
+                    $("min").innerHTML = doubleNum(parseInt(i / 60) % 60);
+                    $("hour").innerHTML = doubleNum(parseInt(i / 3600));
+                }, 16);
+            }
+
+            //暂停
+            function pauseFunc() {
+                clearInterval(timer);
+            }
+
+            //给按钮添加点击事件
+            $("btn1").onclick = function () {
+                if (!isRunning) {
+                    $("btn1").innerHTML = "暂停";
+                    isRunning = true;
+                    startFunc();
+                }
+                else {
+                    $("btn1").innerHTML = "开始";
+                    isRunning = false;
+                    pauseFunc();
+                }
+            }
+            //复位
+            $("reset").onclick = function () {
+                clearInterval(timer);
+                i = 0;
+                isRunning = false;
+                $("btn1").innerHTML = "开始";
+                $("sec").innerHTML = "00";
+                $("min").innerHTML = "00";
+                $("hour").innerHTML = "00";
+            }
+        }
+
+        function doubleNum(n) {
+            if (n < 10) {
+                return "0" + n;
+            } else {
+                return n;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <span id="hour">00</span>
+        <span>:</span>
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+        <br>
+        <button id="btn1">开始</button>
+        <button id="reset">复位</button>
+    </div>
+</body>
+
+</html>

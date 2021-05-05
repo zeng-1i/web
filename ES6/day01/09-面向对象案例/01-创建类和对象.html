@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1、创建类 class 创建一个明星类
+      class Star {
+        constructor(uname, age) {
+          this.uname = uname;
+          this.age = age;
+        }
+        sing(song) {
+          console.log(this.uname + "会唱" + song);
+        }
+      }
+      //2、利用类创建对象 new
+      var ldh = new Star("刘德华", 18);
+      var zxy = new Star("张学友", 20);
+      console.log(ldh);
+      console.log(zxy);
+      ldh.sing("冰雨");
+      zxy.sing("李香兰");
+    </script>
+  </body>
+</html>

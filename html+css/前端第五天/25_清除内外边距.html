@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除内外边距</title>
+    <style>
+        /* 这句话是CSS的第一行代码 清除所有网页元素的边距 后续再单独根据要求设置边距 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        span {
+            background-color: pink;
+            margin: 20px;
+            /* 此时页面显示的也只有左右的内外边距，上下的直接没有生效，所以一般coding时只写左右边距属性，不写上下边距属性 */
+        }
+    </style>
+</head>
+
+<body>
+    123
+    <ul>
+        <li>abc</li>
+    </ul>
+    <span>行内元素尽量之设置左右的内外边距</span>
+</body>
+
+</html>

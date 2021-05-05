@@ -1,0 +1,8 @@
+/* 列表页专有的CSS */
+.sk{
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器之后代选择器</title>
+    <style>
+        /* 我想把ol里面的小li选出来改为pink */
+        /* 后代选择器 */
+        ol li {
+            color: pink;
+        }
+
+        ol li a {
+            color: red;
+        }
+
+        ul li {
+            color: rebeccapurple;
+        }
+
+        .nav li a {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        我就不变色
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li><a href="#">一起来学挖掘机吧</a></li>
+    </ol>
+    <ul>
+        我也不变色
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">我不想变色</a></li>
+    </ul>
+    <ul class="nav">
+        我也不变色
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">我黄了</a></li>
+        <li><a href="#">我黄了</a></li>
+        <li><a href="#">我黄了</a></li>
+    </ul>
+</body>
+
+</html>

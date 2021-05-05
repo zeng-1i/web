@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+  </head>
+  <body>
+    <a href="http://www.itcast.cn" title="都挺好">都挺好</a>
+    <input type="checkbox" name="" id="" checked />
+    <div index="1" data-index="2">我是div</div>
+    <span>123</span>
+
+    <script>
+      $(function () {
+        //1、element.prop("属性名") 获取属性值
+        console.log($("a").prop("title"));
+
+        //更改属性值 prop("属性","属性值")
+        $("a").prop("title", "我们都挺好");
+        $("input").change(function () {
+          console.log($(this).prop("checked"));
+        });
+
+        // console.log($("div").prop("index")); //prop不能获取自定义属性 这里会显示undefined
+        //2、元素的自定义属性 我们通过attr()
+        console.log($("div").attr("index"));
+        $("div").attr("index", 4);
+        console.log($("div").attr("data-index"));
+
+        //3、数据缓存data()这个里面的数据是存放在元素的内存里面
+        $("span").data("uname", "Andy");
+        console.log($("span").data("uname"));
+      });
+    </script>
+  </body>
+</html>

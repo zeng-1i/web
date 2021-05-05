@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            document.write()
+                【注】 会覆盖哑面上原有内容。
+
+            creatElement()
+                格式：document.creatElement()
+                参数：标签名
+                返回值：创建好的这个节点
+
+            appendChild()
+                格式：node1.parentNode.appendChild(node2);
+                功能：将node2节点插入到node1节点子节点的末尾
+
+            creatTextNode()
+                格式：document.creatTextNode(文本);
+                功能：创建文本节点(纯文本)
+
+            insertBefore()
+                格式：box1.parentNode.replaceChild(box2)
+                功能：将Box2添加到box1的前面
+
+            replaceChild()
+                格式:box1.parentNode.replaceCHild(box2,box1)
+                功能：用box2节点将box1节点替换掉
+        */
+        window.onload = function () {
+            var oBtn = document.getElementById("btn1");
+            var oDiv = document.getElementById("div1");
+            oBtn.onclick = function () {
+                // document.write("<h1>hello world</h1>");
+                var oP = document.createElement("p");
+                var oTxt = document.createTextNode("<h1>hello world</h1>");
+                oP.appendChild(oTxt);
+                // oDiv.appendChild(oP);
+
+                //将oP节点插入到oDiv节点的前面
+                document.body.insertBefore(oP, oDiv);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <em>em</em>
+        div文本
+        <strong>strong</strong>
+    </div>
+    <button id="btn1">节点操作</button>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 200px;
+        width: 150px;
+        height: 150px;
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn0">点击回到原点</button>
+    <button class="btn500">点击夏雨荷走500</button>
+    <button class="btn800">点击夏雨荷走800</button>
+    <span>夏雨荷</span>
+    <script>
+      //简单封装函数obj目标对象 target目标位置
+      //给不同的元素指定了不同的定时器
+      function animate(obj, target, callBack) {
+        // console.log(callBack);
+        //当我们不断的点击按钮，这个元素的速度会越来越快，因为定时器开多了
+        //解决方案就是在函数最上面清除一下定时器
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+          //步长值写到定时器的里面
+          //   var step = Math.ceil((target - obj.offsetLeft) / 10);
+          var step = (target - obj.offsetLeft) / 10;
+          step = step > 0 ? Math.ceil(step) : Math.floor(step);
+          if (obj.offsetLeft == target) {
+            clearInterval(obj.timer);
+            if (callBack) {
+              callBack();
+            }
+          }
+          obj.style.left = obj.offsetLeft + step + "px";
+        }, 15);
+      }
+      var span = document.querySelector("span");
+      var btn500 = document.querySelector(".btn500");
+      var btn800 = document.querySelector(".btn800");
+      var btn0 = document.querySelector(".btn0");
+      //调用函数
+      btn500.addEventListener("click", function () {
+        animate(span, 500);
+        // btn.disabled = true;
+      });
+      btn800.addEventListener("click", function () {
+        animate(span, 800);
+      });
+      btn0.addEventListener("click", function () {
+        animate(span, 0, function () {
+          span.style.backgroundColor = "yellow";
+        });
+      });
+    </script>
+  </body>
+</html>

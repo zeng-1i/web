@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .father {
+        width: 400px;
+        height: 400px;
+        background-color: purple;
+        margin: 100px auto;
+      }
+      .son {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        margin: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son">son盒子</div>
+    </div>
+
+    <script>
+      // dom事件流 三个阶段
+      // 1、JS代码中只能执行捕获或者冒泡其中一个阶段
+      // 2、onclick和attachEvent 只能得到冒泡阶段
+      // 3、捕获阶段 如果addEventListener第三个参数是true 那么则处于捕获阶段
+      // document -> html -> body -> father -> son
+      //   var son = document.querySelector(".son");
+      //   son.addEventListener(
+      //     "click",
+      //     function () {
+      //       alert("son");
+      //     },
+      //     true
+      //   );
+
+      //   //此时点击的时候，先弹出father的提示，然后弹出son的提示
+      //   var father = document.querySelector(".father");
+      //   father.addEventListener(
+      //     "click",
+      //     function () {
+      //       alert("father");
+      //     },
+      //     true
+      //   );
+      //  4、冒泡阶段 如果addEventListener 第三个参数是false或者省略 那么则处于冒泡阶段
+      //  son -> father -> body -> html -> document
+      var son = document.querySelector(".son");
+      son.addEventListener(
+        "click",
+        function () {
+          alert("son");
+        },
+        false
+      );
+      var father = document.querySelector(".father");
+      father.addEventListener(
+        "click",
+        function () {
+          alert("father");
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

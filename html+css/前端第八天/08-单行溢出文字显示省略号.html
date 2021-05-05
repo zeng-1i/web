@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单行文本溢出显示省略号</title>
+    <style>
+        div {
+            width: 150px;
+            height: 80px;
+            background-color: pink;
+            margin: 100px auto;
+            /* 如果文字显示不开就自动换行 */
+            /* white-space: normal; */
+            /* 不换行溢出也要强制一行内显示 */
+            white-space: nowrap;
+            /* 溢出的部分隐藏起来 */
+            overflow: hidden;
+            /* 文字用省略号替代超出的部分 */
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        啥也不说了，此处省略一万字
+    </div>
+</body>
+
+</html>

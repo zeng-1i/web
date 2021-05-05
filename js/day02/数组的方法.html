@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 数组的两个方法形成栈结构
+        // push：数组.push(参数1,参数2,参数3...) 给数组末尾添加元素 返回值为插完元素之后的数组长度
+        // pop：数组.pop()  取出一个元素(数组末尾的元素) 返回值为数组尾巴上的元素
+        // 了解 堆-栈的数据结构，知道先入后出 后入先出的存储数据形式
+        // var arr = ["北京" ,"上海" ,"广州"];
+        // arr.push("深圳", "天津", "成都");
+        // var res = arr.pop();
+        // alert(res);
+        // alert(arr);
+
+        // 队列结构  push shift  结构：从末尾进 从头部出     特点 先进先出
+        // var arr = ["唐朝", "元朝", "清朝"];
+        // var res = arr.shift();
+        // alert(res);
+        // alert(arr);
+
+        var arr1 = [10,20,30];
+        var arr2 = [50,60,70];
+        var newArr = arr1.concat(arr2,"hello",true);
+        alert(newArr);
+        alert(newArr.length);
+        alert(arr1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

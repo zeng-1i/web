@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 无参数无返回值的函数
+        // function print(){
+        //     for(var i = 0; i < 10; i++){
+        //         document.write("hello world!<br/>")
+        //     }
+        // }
+
+        // 有参数无返回值的函数
+        // function print(n){
+        //     for(var i = 0; i < n; i++){
+        //         document.write("hello world!<br/>")
+        //     }
+        // }
+        // print(5);
+
+        // 有参数有返回值的函数
+        // function add(num1,num2){
+        //     var sum = num1 + num2;
+        //     alert(sum);
+        //     return sum;
+        // }
+        // add(10,20);
+
+        // 水仙花数
+        function narcissus(){
+            for(var i = 100; i < 1000; i++){
+                var a = i%10;
+                var b = parseInt(i/10)%10;
+                var c = parseInt(i/100);
+
+                var sum = Math.pow(a,3) + Math.pow(b,3) + Math.pow(c,3);
+                if(i == sum){
+                    document.write(i + "<br/>");
+                }
+            }
+        }
+        narcissus();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
