@@ -27,15 +27,12 @@
         background-color: rgb(40, 42, 43);
       }
       .temp2 {
-        position: absolute;
         top: 120px;
-        left: 75px;
-        width: 50px;
-        height: 50px;
-        background-color: rgb(40, 42, 43);
+      }
+      .h {
+        clear: both;
       }
       .temp {
-        clear: both;
         float: left;
         margin: 20px;
         width: 100px;
@@ -51,14 +48,14 @@
     <h2>物体居中的视觉差:</h2>
     <div>
       <div id="d1">
-        <div class="temp1"></div>
+        <div class="temp1 temp2"></div>
       </div>
       <div id="d1">
-        <div class="temp2"></div>
+        <div class="temp1"></div>
       </div>
     </div>
 
-    <h2>同尺寸的方形和原型的视觉差:</h2>
+    <h2 class="h">同尺寸的方形和原型的视觉差:</h2>
     <div>
       <div class="temp"></div>
       <div class="temp" id="circle"></div>
