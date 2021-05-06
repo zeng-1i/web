@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #d1 {
+        float: left;
+        position: relative;
+        width: 200px;
+        height: 300px;
+        background-color: rgb(255, 196, 0);
+        margin-left: 30px;
+      }
+      .temp1 {
+        position: absolute;
+        top: 125px;
+        left: 75px;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(40, 42, 43);
+      }
+      .temp2 {
+        position: absolute;
+        top: 120px;
+        left: 75px;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(40, 42, 43);
+      }
+      .temp {
+        clear: both;
+        float: left;
+        margin: 20px;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(255, 196, 0);
+      }
+      #circle {
+        border-radius: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>物体居中的视觉差:</h2>
+    <div>
+      <div id="d1">
+        <div class="temp1"></div>
+      </div>
+      <div id="d1">
+        <div class="temp2"></div>
+      </div>
+    </div>
+
+    <h2>同尺寸的方形和原型的视觉差:</h2>
+    <div>
+      <div class="temp"></div>
+      <div class="temp" id="circle"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input,
+      select,
+      button {
+        font: inherit;
+      }
+      a {
+        color: inherit;
+      }
+      .callout {
+        position: relative;
+      }
+      .callout::before {
+        content: "";
+        position: absolute;
+        top: -0.4em;
+        left: 1em;
+        padding: 0.35em;
+        background: inherit;
+        border: inherit;
+        border-right: 0;
+        border-bottom: 0;
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" class="callout" />
+    <select name="" id=""></select>
+    <button></button>
+  </body>
+</html>
