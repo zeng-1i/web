@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue 示例</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="name" placeholder="你的名字" />
+      <h1>你好，{{name}}</h1>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script>
+      var myData = {
+        a: 1,
+      };
+      var app = new Vue({
+        el: "#app",
+        data: myData,
+      });
+      console.log(app.a);
+      console.log(myData.a);
+      myData.a = 5;
+      console.log(app.a);
+    </script>
+  </body>
+</html>
