@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>清除浮动</title>
+    <style>
+      .box {
+        padding: 10px;
+        background-color: #cd0000;
+      }
+      .box > img {
+        float: left;
+      }
+      img {
+        width: 256px;
+        height: 192px;
+      }
+      .block {
+        display: block;
+      }
+      .table {
+        display: table;
+      }
+      .list-item {
+        display: list-item;
+      }
+      .clear:after {
+        content: "";
+        display: "";
+        /*这里可以对比一下display的值不同时清除浮动的效果的差异  */
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box clear" id="box">
+      <img src="./images/1.jpg" />
+    </div>
+    请选择display的类型：
+    <select id="select">
+      <option value=""></option>
+      <option value="block">block</option>
+      <option value="table">table</option>
+      <option value="list-item">list-item</option>
+    </select>
+
+    <script>
+      var sel = document.getElementById("select");
+      var box = document.getElementById("box");
+      sel.onchange = function () {
+        box.className = "box " + this.value;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动态文字效果</title>
+    <style>
+      .box {
+        padding: 10px;
+        width: 200px;
+        background-color: #cd0000;
+        text-align: center;
+      }
+      .content {
+        display: inline-block;
+        text-align: left;
+      }
+      #con {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p id="conMore" class="content">文字内容</p>
+    </div>
+    <p id="con"><button id="btnMore">更多文字</button></p>
+
+    <script>
+      var btn = document.getElementById("btnMore");
+      var conter = document.getElementById("conMore");
+
+      if (btn && conter) {
+        btn.onclick = function () {
+          conter.innerHTML += "-新增文字";
+        };
+      }
+    </script>
+  </body>
+</html>

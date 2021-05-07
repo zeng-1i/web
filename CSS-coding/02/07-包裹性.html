@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>包裹性</title>
+    <style>
+      .box {
+        width: 240px;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button>按钮</button>
+
+      <div class="box">
+        <button>文字再多一点</button>
+      </div>
+      <div class="box">
+        <button>
+          按钮文字越多宽度越宽（包裹，内部尺寸特性），但不会超过容器宽度（自适应性）
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

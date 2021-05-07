@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>阻止按钮</title>
+    <style>
+      .active-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        background-color: pink;
+      }
+      .active-btn:active {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>"未定义行为"</h2>
+    <a href="javascript:" class="active-btn">click-here</a>
+    <a href="javascript:" id="btn" class="active-btn">click-here</a>
+    <p>
+      在Chrome浏览器中，两个按钮都能正常按下变色，但是在Firefox浏览器中第二个按钮会因为阻止按钮而没有反应
+    </p>
+    <script>
+      var btn = document.getElementById("btn");
+      if (btn.addEventListener) {
+        btn.addEventListener("mousedown", function (e) {
+          e.preventDefault();
+        });
+      }
+    </script>
+  </body>
+</html>
