@@ -16,3 +16,18 @@ console.log(bar, foo);
 console.log(foo1, bar1);
 console.log(z, c1);
 console.log(hard, mor);
+
+var l = 1;
+function f1() {
+  console.log(l);
+  var b = 2;
+  var b2 = 44;
+  var b3 = 55;
+  return function f2() {
+    return {
+      b,
+    };
+  };
+}
+var obj = f1()();
+console.log(obj);

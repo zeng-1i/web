@@ -18,7 +18,16 @@ var arrow_one = (one) => {
 arrow();
 arrow_one("first");
 
+
 var sum = (x, y) => x + y;
 console.log(sum(5, 8));
 
-const add = (a) => (b) => a + b;
+// 箭头函数嵌套用法
+const add = a => {
+    return function (a) {
+        return a + b
+    }
+}
+const add_curr = a => b => a + b;
+
+add(1)(2)

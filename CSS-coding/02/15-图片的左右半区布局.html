@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+      .box {
+        display: inline-block;
+        position: relative;
+      }
+      .prev,
+      .next {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        opacity: 0.5;
+      }
+      .prev {
+        left: 0;
+        background-color: #cd0000;
+      }
+      .next {
+        right: 0;
+        background-color: #34538b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <a href="javascript:" class="prev" title="上一张">上一张</a>
+      <a href="javascript:" class="next" title="下一张">下一张</a>
+      <img src="../02/images/1.jpg" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //改变函数内this指向 js提供了三种方法 call() apply() bind()
+
+      //2、apply() 应用 运用的意思
+      var o = {
+        name: "andy",
+      };
+      function fn() {
+        console.log(this);
+      }
+      fn.apply(o);
+
+      var arr = [1, 66, 3, 99, 4];
+      var max = Math.max.apply(Math, arr);
+      var min = Math.min.apply(Math, arr);
+      console.log(max, min);
+    </script>
+  </body>
+</html>

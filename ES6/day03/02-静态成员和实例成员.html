@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Start(uname, age) {
+        this.uname = uname;
+        this.age = age;
+        this.sing = function () {
+          console.log("我会唱歌");
+        };
+      }
+      var ldh = new Start("刘德华", 18);
+      //1、实例成员就是构造函数内部通过this添加的成员 uname age sing 就是实例成员
+      //实例成员只能通过实例化对象来访问
+      console.log(ldh.uname);
+      ldh.sing();
+      //console.log(Star.uname);不可以通过构造函数来访问实例成员
+      //2、静态成员 在构造函数本身上添加的成员  sex就是静态成员
+      Start.sex = "男";
+      //静态成员只能通过构造函数来访问
+      console.log(Start.sex);
+      console.log(ldh.sex); //静态成员不能通过对象去访问 undefine
+    </script>
+  </body>
+</html>

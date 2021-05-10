@@ -102,6 +102,18 @@ ES6 Module 语法学习总结 https://juejin.cn/post/6844903993462751239
 
 
 ```js
+export const a = 5;
+export class A {}
+export function b() {}
+const c = 'my export name is default';
+export default c; // 将 c 重命名为 default
+
+
+
+
+import default_var from './module'
+import { a as renameA, A, b, default as d } from './module'; 
 import * as module2 from './module2';  // 到处全部命名为一个变量 
+
 ```
 
