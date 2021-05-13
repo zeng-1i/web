@@ -4,6 +4,10 @@ import HelloWorld from '@/components/HelloWorld'
 import HelloName from '@/views/02_data_bind/HelloName'
 import Lifestyle from '@/views/02_data_bind/Lifestyle'
 import DataBind from '@/views/02_data_bind/DataBind'
+import directives from  '@/views/02_data_bind/directives'
+import InstructionsAndEvents from '@/views/02_data_bind/InstructionsAndEvents'
+import ShoppingCart from '@/views/02_data_bind/ShoppingCart'
+import ToDo from '@/views/02_data_bind/ToDo'
 
 Vue.use(Router)
 
@@ -20,6 +24,22 @@ export default new Router({
     {
       path: '/bind',
       component: DataBind
+    },
+    {
+      path: '/directives',
+      component: directives
+    },
+    {
+      path: '/InstructionsAndEvents',
+      component: InstructionsAndEvents
+    },
+    {
+      path: '/ShoppingCart',
+      component: ShoppingCart
+    },
+    {
+      path: '/ToDo',
+      component: ToDo
     }
   ]
 })

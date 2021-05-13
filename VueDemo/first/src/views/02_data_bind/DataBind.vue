@@ -57,13 +57,13 @@ export default {
             var hours = padDate(date.getHours())
             var minutes = padDate(date.getMinutes())
             var seconds = padDate(date.getSeconds())
-
              return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
-            // return year + '-' + month + '-' + day + ' ' + hours + ':' + minu 
         }
     },
-    methods: {
-
+    beforeDestroy: function() {
+        if (this.timer){
+            clearInterval(this.timer);
+        }
 
     }
 }
